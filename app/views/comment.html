@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-6">
+    <p class="pull-left">{{comment.user}}</p>
+  </div>
+  <div class="col-sm-6">
+    <p class="pull-right">{{comment.time_ago}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12" ng-bind-html="comment.content">
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-1">
+  </div>
+  <div class="well col-sm-11">
+    <button class="btn btn-default btn-block" btn-checkbox ng-model="comment.show"><span class="glyphicon glyphicon-comment"></span>
+    </button>
+    <div ng-if="$parent.comment.show" ng-include="'views/comment.html'" ng-repeat="comment in comment.comments">
+    </div>
+  </div>
+</div>
