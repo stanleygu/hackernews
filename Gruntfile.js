@@ -378,7 +378,21 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
-
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        connectCommits: false,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'https://github.com/stanleygu/hackernews.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
     // Test settings
     karma: {
       unit: {
