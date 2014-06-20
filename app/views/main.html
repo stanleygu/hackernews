@@ -1,16 +1,19 @@
 <div class="container">
-    <div class="well row" ng-repeat="item in data">
-        <div class="col-sm-1">
-            <h3>{{$index + 1}}</h3>
-        </div>
-        <div class="col-sm-9">
-            <h1><a ng-href="{{item.url}}">{{item.title}}</h1>
-            <p><a ng-href="{{item.domain}}">{{item.domain}}</a>
-            </p>
-            <p>{{item.points}} by {{item.user}} {{item.time_ago}} - {{item.comments_count}} comments</p>
-        </div>
-        <div class="col-sm-2">
-            <a class="btn btn-primary btn-lg btn-block" ng-href="#/item/{{item.id}}"><span class="glyphicon glyphicon-comment"></span></a>
-        </div>
-    </div>
-</div>
+  <div class="row">
+    <table class="table table-striped">
+      <tr ng-repeat="item in data">
+        <td>
+          <p>{{$index + 1}}</p>
+        </td>
+        <td>
+          <p><a ng-href="{{item.url}}">{{item.title}}</p>
+          <p><a ng-href="{{item.domain}}">{{item.domain}}</a>
+          </p>
+          <p>{{item.points}} by {{item.user}} {{item.time_ago}} - {{item.comments_count}} comments</p>
+        </td>
+        <td style="vertical-align: middle;">
+          <a style="display: block; width: 100%; height: 100%; min-width: 100px;" class="btn btn-primary btn-lg btn-block" ng-href="#/item/{{item.id}}"><span class="glyphicon glyphicon-comment"></span></a>
+        </td>
+      </tr>
+    </table>
+  </div>
