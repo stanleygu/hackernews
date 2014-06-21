@@ -1,7 +1,7 @@
 <div class="container">
   <div class="well row">
-    <h1><a ng-href="{{item.url}}">{{item.title}}</h1>
-    <p><a ng-href="{{item.domain}}">{{item.domain}}</a>
+    <p><a ng-href="{{item.url}}">{{item.title}}</p>
+    <p><a ng-href="{{'http://' + item.domain}}">{{item.domain}}</a>
     </p>
     <p>{{item.points}} by {{item.user}} {{item.time_ago}} - {{item.comments_count}} comments</p>
   </div>

@@ -16,10 +16,4 @@ angular.module('angularHnApp')
     error(function() {
       $scope.item = placeHolder.item;
     });
-
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });
