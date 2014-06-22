@@ -9,14 +9,14 @@
           <p>{{$index + 1}}</p>
         </td>
         <td>
-          <a ng-href="{{item.url}}">
-          <p><a ng-href="{{item.url}}">{{item.title}}</p>
-          <p><a ng-href="{{item.domain}}">{{item.domain}}</a>
-          </p>
-          <p>{{item.points}} by {{item.user}} {{item.time_ago}} - {{item.comments_count}} comments</p>
+          <p><a ng-href="{{item.url}}">{{item.title}}</a></p>
+          <p><a ng-href="{{item.domain}}">{{item.domain}}</a></p>
+          <p>{{item.points}} by {{item.user}} {{item.time_ago}} - <a ng-href="#/item/{{item.id}}">{{item.comments_count}} comments</a></p>
         </td>
         <td style="position: relative; vertical-align: middle;">
-          <a style="position:absolute; top: 0; right: 0; height: 100%; min-width: 80px;" class="btn btn-default btn-lg btn-block" ng-href="#/item/{{item.id}}"><span class="glyphicon glyphicon-comment"></span></a>
+          <a style="min-width:100px;" class="btn btn-default btn-lg btn-block" ng-href="#/item/{{item.id}}">
+            <span class="glyphicon glyphicon-comment"></span>
+          </a>
         </td>
       </tr>
     </table>
