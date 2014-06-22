@@ -1,0 +1,19 @@
+CACHE MANIFEST
+# rev 1 - 2014-06-22T05:46:16.453Z
+
+CACHE:
+404.html
+favicon.ico
+images/yeoman.5cff96e1.png
+index.html
+robots.txt
+scripts/scripts.b66412ed.js
+scripts/vendor.bbcf9d6a.js
+styles/main.a080aacb.css
+views/about.html
+views/comment.html
+views/item.html
+views/main.html
+
+NETWORK:
+*
