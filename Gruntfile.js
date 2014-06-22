@@ -392,6 +392,16 @@ module.exports = function (grunt) {
         }
       }
     },
+    appcache: {
+      options: {
+        basePath: '<%= yeoman.dist %>'
+      },
+      all: {
+        dest: '<%= yeoman.dist %>/manifest.appcache',
+        network: '*',
+        cache: '<%= yeoman.dist %>/**/*',
+      }
+    },
     // Test settings
     karma: {
       unit: {
@@ -444,7 +454,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'appcache'
   ]);
 
   grunt.registerTask('default', [
