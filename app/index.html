@@ -24,7 +24,13 @@
 
   <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container">
-        <h3><a href="#/home">Hacker News</a></h3>
+        <a class="navbar-brand" href="#/home">Hacker News</a>
+        <a type="button" class="btn btn-default btn-lg pull-left" href="#/home">
+          <span class="glyphicon glyphicon-home"></span>
+        </a>
+        <button type="button" class="btn btn-default btn-lg pull-right" ng-click="refresh()">
+          <span class="glyphicon glyphicon-refresh"></span>
+        </button>
     </div>
   </nav>
   <!-- Add your site or application content here -->
@@ -96,6 +102,7 @@
   <script src="scripts/controllers/about.js"></script>
   <script src="scripts/controllers/item.js"></script>
   <script src="scripts/services/placeholder.js"></script>
+  <script src="scripts/services/hacker-news-data.js"></script>
   <!-- endbuild -->
 </body>
 
